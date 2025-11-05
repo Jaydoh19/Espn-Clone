@@ -12,6 +12,7 @@ body{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 10px;
   background: linear-gradient(135deg, white, lightgray);
   min-height: 100vh;
 }
@@ -191,4 +192,49 @@ a:active {
 .sport{
   font-weight: 600;
   font-size: 1.3rem;
+}
+
+/*Title 2 Styles*/
+.title2{
+  text-align: center;
+}
+
+.title2 h1{
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+/*Line styles*/
+.live-div{
+  width: 50%;
+}
+
+.games-today-div{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.line{
+  margin-top: 2.5rem;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.line-text{
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.line-text-2{
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+/*Games container Styles*/
+
+.games-container{
+  margin-top: 2.5rem;
+  width: 50%;
+  border: 1px solid red;
 }
