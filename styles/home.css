@@ -35,17 +35,16 @@ body{
 }
 
 /* Darkmode button */ 
-/* Smaller theme toggle */
 .dark-mode-btn {
-  --toggle-size: 12px; /* smaller font size for reference */
+  --toggle-size: 12px; /* smaller font size */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: 4.5em;        /* smaller width */
   height: 2.25em;      /* smaller height */
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #2a2a2a 50%, #efefef 50%) no-repeat; /* reversed */
   background-size: 205%;
-  background-position: 0;
+  background-position: 0;  /* start showing dark side (will turn dark mode) */
   transition: 0.4s;
   border-radius: 99em;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -57,27 +56,26 @@ body{
 
 .dark-mode-btn::before {
   content: "";
-  width: 1.5em;          /* smaller knob */
-  height: 1.5em;         /* smaller knob */
+  width: 1.5em;          
+  height: 1.5em;         
   position: absolute;
-  top: 0.375em;          /* adjust for smaller height */
-  left: 0.375em;         /* adjust for smaller width */
-  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  top: 0.375em;          
+  left: 0.375em;         
+  background: linear-gradient(to right, #2a2a2a 50%, #efefef 50%) no-repeat; /* reversed */
   background-size: 205%;
-  background-position: 100%;
+  background-position: 100%; /* start knob on dark side */
   border-radius: 50%;
   transition: 0.4s;
 }
 
 .dark-mode-btn:checked::before {
-  left: calc(100% - 1.5em - 0.375em); /* adjust for smaller knob */
+  left: calc(100% - 1.5em - 0.375em); 
   background-position: 0;
 }
 
 .dark-mode-btn:checked {
   background-position: 100%;
 }
-
 
 
 
