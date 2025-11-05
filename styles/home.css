@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/*Nav Styles*/
 
 body{
   font-family: "Poppins", sans-serif;
@@ -84,6 +83,8 @@ body{
   font-size: 2rem;
 }
 
+/*Nav Styles*/
+
 nav{
   display: flex;
   width: 50%;
@@ -91,8 +92,8 @@ nav{
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  background: linear-gradient(155deg, rgb(219, 219, 219), rgb(119, 109, 126));
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
   border-radius: 20px;
 }
 
