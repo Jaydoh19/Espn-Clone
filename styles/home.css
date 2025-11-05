@@ -4,6 +4,127 @@
   box-sizing: border-box;
 }
 
+/*Nav Styles*/
+
+body{
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(135deg, white, lightgray);
+  min-height: 100vh;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.title-container p {
+  color: #ecf0f1;               
+  font-size: 17px;
+  background-color: #e22d2d;       
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 0px 6px 0px #851414; 
+  transition: all 0.2s;
+}
+
+/* Darkmode button */ 
+/* Smaller theme toggle */
+.dark-mode-btn {
+  --toggle-size: 12px; /* smaller font size for reference */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 4.5em;        /* smaller width */
+  height: 2.25em;      /* smaller height */
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  transition: 0.4s;
+  border-radius: 99em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
+
+.dark-mode-btn::before {
+  content: "";
+  width: 1.5em;          /* smaller knob */
+  height: 1.5em;         /* smaller knob */
+  position: absolute;
+  top: 0.375em;          /* adjust for smaller height */
+  left: 0.375em;         /* adjust for smaller width */
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.dark-mode-btn:checked::before {
+  left: calc(100% - 1.5em - 0.375em); /* adjust for smaller knob */
+  background-position: 0;
+}
+
+.dark-mode-btn:checked {
+  background-position: 100%;
+}
+
+
+
+
+.title-container p {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 nav{
-  border: 1px solid red;
+  display: flex;
+  width: 50%;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background: linear-gradient(155deg, rgb(219, 219, 219), rgb(119, 109, 126));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;    
+  text-decoration: none; 
+}
+
+.sports-container{
+  justify-content: space-between;
+}
+
+.sports-list{
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.sport{
+  font-weight: 600;
+  font-size: 1.3rem;
 }
