@@ -15,6 +15,7 @@ body{
   gap: 10px;
   background: linear-gradient(135deg, white, lightgray);
   min-height: 100vh;
+  padding-bottom: 20vh;
 }
 
 .title-container {
@@ -234,8 +235,154 @@ a:active {
 
 /*Games container Styles*/
 
-.games-container{
+.nba-container,
+.nfl-container,
+.nhl-container,
+.mbl-container,
+.fc-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0px 1rem 0px;
   margin-top: 2.5rem;
-  width: 50%;
-  border: 1px solid red;
+  width: 45%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+.nba-games,
+.nfl-games,
+.nhl-games,
+.mbl-games,
+.fc-games {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nba-title-container,
+.nfl-title-container,
+.nhl-title-container,
+.mbl-title-container,
+.fc-title-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.nfl-title-container img,
+.nhl-title-container img,
+.mbl-title-container img,
+.fc-title-container img {
+  margin-right: 10px;
+  width: 50px;
+}
+
+.nba-title-container img{
+  width: 50px;
+}
+
+.nba-title-container p,
+.nfl-title-container p,
+.nhl-title-container p,
+.mbl-title-container p,
+.fc-title-container p {
+  align-self: center;
+  font-size: 1.3rem;
+}
+
+.nba-title-line,
+.nfl-title-line,
+.nhl-title-line,
+.mbl-title-line,
+.fc-title-line {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 60%;
+  border: 1px solid gray;
+}
+
+.nba-footer,
+.nfl-footer,
+.nhl-footer,
+.mbl-footer,
+.fc-footer {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.nba-footer p:hover,
+.nfl-footer p:hover,
+.nhl-footer p:hover,
+.mbl-footer p:hover,
+.fc-footer p:hover {
+  color: #e22d2d; 
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+/*Game grid Display*/
+
+/* Grid container */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-rows: repeat(3, auto);   /* 3 rows sized to content */
+  gap: 2px;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.game-card {
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: scale(1.03);
+}
+
+/* Team row */
+.team-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.team-row img {
+  width: 28px;
+  height: 28px;
+}
+
+.team-name {
+  flex-grow: 1;
+  margin-left: 0.6rem;
+  font-weight: 600;
+}
+
+.team-score {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Game status (time, final, halftime, etc.) */
+.game-status {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #c0392b;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+
