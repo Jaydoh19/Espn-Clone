@@ -88,21 +88,16 @@ async function updateScores() {
 
       // Convert UTC game start to local time
       const utcDate = new Date(game.date);
-      const localTime = utcDate.toLocaleString([], {
-        hour: 'numeric',
-        minute: '2-digit',
+      const localDate = utcDate.toLocaleString([], {
         month: 'short',
         day: 'numeric'
       });
 
-      // Decide what to display in the status
-      let statusDisplay;
-      // If the game has started or finished, show its status
-      if (game.status && game.status !== "Scheduled" && !game.status.includes("T")) {
-        statusDisplay = game.status;
+      // Handle bad UTC timestamps
+      if (!game.status || game.status.includes("T")) {
+        statusDisplay = localDate;
       } else {
-        // Otherwise, display the local time
-        statusDisplay = localTime;
+        statusDisplay = game.status;
       }
 
       const card = document.createElement('div');
