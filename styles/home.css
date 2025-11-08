@@ -334,10 +334,10 @@ a:active {
 /* Grid container */
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 5px;
-  width: 100%;
-  max-width: 700px;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 8px;
+  width: 80%;
   margin: 2rem auto;
 }
 
@@ -345,10 +345,9 @@ a:active {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  padding: 0.8rem 1rem;
-  text-align: left;
   width: 100%;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .game-card:hover {
@@ -356,21 +355,33 @@ a:active {
 }
 
 .team-row {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
-  margin: 6px 0;
+  margin-top: 10px
 }
 
 .team {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  align-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.team-sub{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .team img {
   width: 28px;
   height: 28px;
+  object-fit: contain;  /* ensures logo fits perfectly */
+  vertical-align: middle; /* keeps it inline with text */
 }
 
 .team-name {
@@ -383,12 +394,16 @@ a:active {
   font-size: 1.2rem;
 }
 
+.vs-separator {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+}
+
 .game-status {
   font-size: 0.9rem;
   color: #c0392b; /* red for active games */
   font-weight: 600;
-  text-align: right;
+  text-align: center;
   margin-top: 0.5rem;
 }
-
-
