@@ -88,13 +88,14 @@ async function updateScores() {
 
       // Convert UTC game start to local time
       const utcDate = new Date(game.date);
-      const localDate = utcDate.toLocaleString([], {
-        month: 'short',
-        day: 'numeric'
-      });
+      const localDate = utcDate.toLocaleString('en-US', {
+      timeZone: 'UTC',
+      month: 'short',
+      day: 'numeric'
+    });
 
       // Handle bad UTC timestamps
-      if (!game.status || game.status.includes("T")) {
+      if (!game.status || game.status.includes("T") || game.status === "Scheduled") {
         statusDisplay = localDate;
       } else {
         statusDisplay = game.status;
