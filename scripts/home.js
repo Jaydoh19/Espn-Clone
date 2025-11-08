@@ -142,3 +142,9 @@ updateScores();
 
 // 🔁 Auto-update every minute (no page reload)
 setInterval(updateScores, 30000);
+
+document.addEventListener("click", e => {
+  if (e.target.closest(".game-card")) {
+    console.log("clicked a card");
+  }
+});
