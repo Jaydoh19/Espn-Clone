@@ -15,5 +15,5 @@ updateScores();
 setInterval(() => {
   console.log("⏱ Refreshing scores...");
   updateScores();
-}, 30000);
+}, 15000);
 
