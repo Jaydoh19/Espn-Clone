@@ -126,6 +126,7 @@ a{
 
 .nfl:hover, .nba:hover, .nhl:hover, .mbl:hover {
   transform: translateY(-3px);
+  box-shadow: 0px 6px 8px rgba(0,0,0,0.5); 
 }
 
 .nfl:active, .nba:active, .nhl:active, .mbl:active {
@@ -346,8 +347,12 @@ a:active {
 }
 
 .team-score {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.2rem;
+}
+
+.winner-score {
+  font-weight: 800; /* bold when winning */
 }
 
 .vs-separator {

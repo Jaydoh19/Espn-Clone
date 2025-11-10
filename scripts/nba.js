@@ -93,6 +93,19 @@ export async function updateScores(gameNum) {
         statusDisplay = localDate;
       } else {
         statusDisplay = game.status;
+      };      
+
+      const homeScore = game.home_team_score;
+      const awayScore = game.visitor_team_score;
+
+      // Decide who’s winning
+      let homeScoreClass = "team-score";
+      let awayScoreClass = "team-score";
+
+      if (homeScore > awayScore) {
+        homeScoreClass = "team-score winner-score"; // home team winning
+      } else if (awayScore > homeScore) {
+        awayScoreClass = "team-score winner-score"; // away team winning
       }
 
       const card = document.createElement('div');
@@ -100,31 +113,34 @@ export async function updateScores(gameNum) {
       card.innerHTML = `
         <div class="team-row">
           <div class="team">
-              <div class="team-sub">
+            <div class="team-sub">
               <img src="${homeLogo}" alt="${home}" class="team-logo">
               <span class="team-name">${home}</span>
-              </div>
-              <span class="team-score">${game.home_team_score}</span>
             </div>
+            <span class="${homeScoreClass}">${homeScore}</span>
+          </div>
+
           <div class="vs-separator">vs</div>
+
           <div class="team">
-              <div class="team-sub">
+            <div class="team-sub">
               <img src="${awayLogo}" alt="${away}" class="team-logo">
               <span class="team-name">${away}</span>
-              </div>
-              <span class="team-score">${game.visitor_team_score}</span>
+            </div>
+            <span class="${awayScoreClass}">${awayScore}</span>
           </div>
         </div>
         <div class="game-status" style="color:${statusColor}">${statusDisplay}</div>
       `;
       container.appendChild(card);
     });
-
   } catch (err) {
     console.error('Error updating scores:', err);
     container.innerHTML = `<p>Error loading games.</p>`;
   }
 }
+
+
 
 
 document.addEventListener("click", e => {
