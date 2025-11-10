@@ -95,11 +95,10 @@ nav{
   justify-content: center;
   margin-top: 2rem;
   color: #ecf0f1;               
-  font-size: 17px;
-  background-color: darkgray;       
+  background: linear-gradient(135deg, rgb(233, 233, 233), rgb(177, 177, 177));       
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 0px 6px 0px gray; 
+  box-shadow: 0px 6px 8px rgba(0,0,0,0.2); 
 }
 
 a{
@@ -115,56 +114,21 @@ a{
 
 /*a element styles*/
 
-.nfl {
-  background-color: rgb(151, 74, 29);       
-  box-shadow: 0px 6px 0px rgb(110, 53, 20); 
+.nfl, .nba, .nhl, .mbl {
+  background-color: rgb(255, 255, 255);       
+  box-shadow: 0px 6px 8px rgba(0,0,0,0.2); 
 }
 
-
-.nba {
-  background-color: rgb(204, 104, 46);       
-  box-shadow: 0px 6px 0px rgb(173, 72, 13); 
-}
-
-.nba li {
-  color: black;
-}
-
-.nhl {
-  background-color: rgb(207, 207, 207);       
-  box-shadow: 0px 6px 0px gray; 
-}
-
-.nhl li {
-  color: black;
-}
-
-.mbl {
-  background-color: rgb(238, 237, 237);       
-  box-shadow: 0px 6px 0px rgb(209, 55, 55); 
-}
-
-.mbl li {
-  color: rgb(248, 40, 40);
-}
-
-.fc {
-  background-color: white;       
-  box-shadow: 0px 6px 0px black;; 
-}
-
-.fc li{
+.nfl li, .nba li, .nhl li, .mbl li {
   color: black;
 }
 
 
-.nfl:hover, .nba:hover, .nhl:hover, .mbl:hover,
-.fc:hover {
+.nfl:hover, .nba:hover, .nhl:hover, .mbl:hover {
   transform: translateY(-3px);
 }
 
-.nfl:active, .nba:active, .nhl:active, .mbl:active,
-.fc:active {
+.nfl:active, .nba:active, .nhl:active, .mbl:active {
   transform: scale(0.9);
 }
 
@@ -239,8 +203,7 @@ a:active {
 .nba-container,
 .nfl-container,
 .nhl-container,
-.mbl-container,
-.fc-container {
+.mbl-container {
   display: flex;
   justify-content: center;
   padding: 1rem 0px 1rem 0px;
@@ -254,8 +217,7 @@ a:active {
 .nba-games,
 .nfl-games,
 .nhl-games,
-.mbl-games,
-.fc-games {
+.mbl-games{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -267,8 +229,7 @@ a:active {
 .nba-title-container,
 .nfl-title-container,
 .nhl-title-container,
-.mbl-title-container,
-.fc-title-container {
+.mbl-title-container {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -276,8 +237,7 @@ a:active {
 
 .nfl-title-container img,
 .nhl-title-container img,
-.mbl-title-container img,
-.fc-title-container img {
+.mbl-title-container img {
   margin-right: 10px;
   width: 50px;
 }
@@ -289,8 +249,7 @@ a:active {
 .nba-title-container p,
 .nfl-title-container p,
 .nhl-title-container p,
-.mbl-title-container p,
-.fc-title-container p {
+.mbl-title-container p {
   align-self: center;
   font-size: 1.3rem;
 }
@@ -298,8 +257,7 @@ a:active {
 .nba-title-line,
 .nfl-title-line,
 .nhl-title-line,
-.mbl-title-line,
-.fc-title-line {
+.mbl-title-line{
   margin-top: 1rem;
   margin-bottom: 1rem;
   width: 60%;
@@ -309,8 +267,7 @@ a:active {
 .nba-footer,
 .nfl-footer,
 .nhl-footer,
-.mbl-footer,
-.fc-footer {
+.mbl-footer{
   display: flex;
   justify-content: space-evenly; 
   align-items: center;
@@ -321,8 +278,7 @@ a:active {
 .nba-footer p:hover,
 .nfl-footer p:hover,
 .nhl-footer p:hover,
-.mbl-footer p:hover,
-.fc-footer p:hover {
+.mbl-footer p:hover {
   color: #e22d2d; 
   transform: scale(1.1);
   cursor: pointer;

@@ -10,10 +10,9 @@ document.querySelector(".line-text-2").innerHTML = today;
 
 
 // Run immediately once
-updateScores();
+updateScores(6);
 
 setInterval(() => {
-  console.log("⏱ Refreshing scores...");
-  updateScores();
+  updateScores(6);
 }, 15000);
 

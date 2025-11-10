@@ -46,7 +46,7 @@ function getTodayDate() {
 
 
 // Fetch + refresh data without reloading page
-export async function updateScores() {
+export async function updateScores(gameNum) {
   const today = getTodayDate();
   const url = `https://api.balldontlie.io/v1/games?dates[]=${today}&per_page=100`;
   const container = document.querySelector('.game-grid');
@@ -65,7 +65,7 @@ export async function updateScores() {
     container.innerHTML = '';
 
     // Limit to 6 cards
-    const games = data.data.slice(0, 12);
+    const games = data.data.slice(0, gameNum);
 
     // 🎮 Create updated cards
     games.forEach(game => {
