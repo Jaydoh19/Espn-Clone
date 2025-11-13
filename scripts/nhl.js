@@ -52,10 +52,10 @@ function getTodayDate() {
 
 
 // Fetch + refresh data without reloading page
-export async function updateNBAScores(gameNum) {
+export async function updateNHLScores(gameNum) {
   const today = getTodayDate();
-  const url = `https://api.balldontlie.io/v1/games?dates[]=${today}&per_page=100`;
-  const container = document.querySelector('.game-grid');
+  const url = `https://api.balldontlie.io/nhl/v1/games?dates[]=${today}&per_page=100`;
+  const container = document.querySelector('#nhlGrid');
 
   
   try {
@@ -63,7 +63,7 @@ export async function updateNBAScores(gameNum) {
     const data = await res.json();
 
     if (!data.data || data.data.length === 0) {
-      container.innerHTML = `<p>No NBA games today.</p>`;
+      container.innerHTML = `<p>No NHL games today.</p>`;
       return;
     }
 
@@ -146,11 +146,11 @@ export async function updateNBAScores(gameNum) {
   }
 }
 
-updateNBAScores(15);
+updateNHLScores(15);
 
 setInterval(() => {
-  updateNBAScores(15);
-}, 45000);
+  updateNHLScores(15);
+}, 30000);
 
 
 document.addEventListener("click", e => {

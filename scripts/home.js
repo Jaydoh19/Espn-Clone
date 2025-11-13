@@ -1,4 +1,7 @@
-import { updateScores } from "./nba.js";
+import { updateMLBScores } from "./mlb.js";
+import { updateNBAScores } from "./nba.js";
+import { updateNHLScores } from "./nhl.js";
+
 
 //Displaying todays date
 dayjs.extend(window.dayjs_plugin_localizedFormat);
@@ -10,9 +13,15 @@ document.querySelector(".line-text-2").innerHTML = today;
 
 
 // Run immediately once
-updateScores(6);
+updateNBAScores(6);
+updateNFLScores(6);
+updateNHLScores(6);
+updateMLBScores(6);
 
 setInterval(() => {
-  updateScores(6);
-}, 15000);
+  updateNBAScores(6);
+  updateNFLScores(6);
+  updateNHLScores(6);
+  updateMLBScores(6);
+}, 30000);
 

@@ -22,7 +22,7 @@
           <a href="nfl.html" class="sport nfl"><li>NFL</li></a>
           <a href="nba.html" class="sport nba"><li>NBA</li></a>
           <a href="nhl.html" class="sport nhl"><li>NHL</li></a>
-          <a href="mbl.html" class="sport mbl"><li>MBL</li></a>
+          <a href="mbl.html" class="sport mbl"><li>MLB</li></a>
         </ul>
       </div>
     </nav>
@@ -54,8 +54,8 @@
         <div class="nba-title-line"></div>
         <div class="game-grid" id="gamesGrid"></div>
         <div class="nba-footer">
-          <p>Complete Scoreboard</p>
-          <p>Standings</p>
+          <a href="nba.html"><p>Complete Scoreboard</p></a>
+          <a href="nba.html"><p>Standings</p></a>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@
           <p>NFL Games</p>
         </div>
         <div class="nfl-title-line"></div>
-        <div class="game-grid" id="gamesGrid"></div>
+        <div class="game-grid" id="nflGrid"></div>
         <div class="nfl-footer">
           <p>Complete Scoreboard</p>
           <p>Standings</p>
@@ -84,7 +84,7 @@
           <p>NHL Games</p>
         </div>
         <div class="nhl-title-line"></div>
-        <div class="game-grid" id="gamesGrid"></div>
+        <div class="game-grid" id="nhlGrid"></div>
         <div class="nhl-footer">
           <p>Complete Scoreboard</p>
           <p>Standings</p>
@@ -97,10 +97,10 @@
       <div class="mbl-games">
         <div class="mbl-title-container">
           <img src="images/leagues/mlb.png">
-          <p>MBL Games</p>
+          <p>MLB Games</p>
         </div>
         <div class="mbl-title-line"></div>
-        <div class="game-grid" id="gamesGrid"></div>
+        <div class="game-grid" id="mlbGrid"></div>
         <div class="mbl-footer">
           <p>Complete Scoreboard</p>
           <p>Standings</p>
@@ -110,6 +110,9 @@
 
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/localizedFormat.js"></script>
-  <script type="module" src="scripts/home.js"></script>  
+  <script type="module" src="scripts/home.js"></script>
+  <script type="module" src="scripts/nfl.js"></script> 
+  <script type="module" src="scripts/nhl.js"></script> 
+  <script type="module" src="scripts/mlb.js"></script>  
   </body>
 </html>

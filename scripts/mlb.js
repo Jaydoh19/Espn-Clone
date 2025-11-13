@@ -2,36 +2,36 @@ const apiKey = "0b7aa102-9811-48c5-bb0e-240a86838d37";
 
 // Team logos
 const teamLogos = {
-  ATL: "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
-  BOS: "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
-  BKN: "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
-  CHA: "https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
-  CHI: "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
-  CLE: "https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
-  DAL: "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
-  DEN: "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
-  DET: "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
-  GSW: "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
-  HOU: "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
-  IND: "https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
-  LAC: "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
-  LAL: "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
-  MEM: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
-  MIA: "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
-  MIL: "https://a.espncdn.com/i/teamlogos/nba/500/mil.png",
-  MIN: "https://a.espncdn.com/i/teamlogos/nba/500/min.png",
-  NOP: "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
-  NYK: "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
-  OKC: "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
-  ORL: "https://a.espncdn.com/i/teamlogos/nba/500/orl.png",
-  PHI: "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
-  PHX: "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
-  POR: "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
-  SAC: "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
-  SAS: "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
-  TOR: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
-  UTA: "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
-  WAS: "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png"
+  ATL: "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+  BOS: "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
+  NYY: "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+  LAD: "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+  HOU: "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png",
+  TEX: "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png",
+  PHI: "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+  CHC: "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+  SF:  "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png",
+  SD:  "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+  STL: "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png",
+  TOR: "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+  SEA: "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png",
+  MIL: "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+  DET: "https://a.espncdn.com/i/teamlogos/mlb/500/det.png",
+  CIN: "https://a.espncdn.com/i/teamlogos/mlb/500/cin.png",
+  MIN: "https://a.espncdn.com/i/teamlogos/mlb/500/min.png",
+  BAL: "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png",
+  PIT: "https://a.espncdn.com/i/teamlogos/mlb/500/pit.png",
+  CLE: "https://a.espncdn.com/i/teamlogos/mlb/500/cle.png",
+  ARI: "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png",
+  COL: "https://a.espncdn.com/i/teamlogos/mlb/500/col.png",
+  KC:  "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png",
+  OAK: "https://a.espncdn.com/i/teamlogos/mlb/500/oak.png",
+  TB:  "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+  MIA: "https://a.espncdn.com/i/teamlogos/mlb/500/mia.png",
+  CWS: "https://a.espncdn.com/i/teamlogos/mlb/500/chw.png",
+  WSH: "https://a.espncdn.com/i/teamlogos/mlb/500/wsh.png",
+  NYM: "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png",
+  ANA: "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png"
 };
 
 //Displaying todays date
@@ -52,18 +52,17 @@ function getTodayDate() {
 
 
 // Fetch + refresh data without reloading page
-export async function updateNBAScores(gameNum) {
+export async function updateMLBScores(gameNum) {
   const today = getTodayDate();
-  const url = `https://api.balldontlie.io/v1/games?dates[]=${today}&per_page=100`;
-  const container = document.querySelector('.game-grid');
-
+  const url = `https://api.balldontlie.io/mlb/v1/games?dates[]=2025-11-01&per_page=100`;
+  const container = document.querySelector('#mlbGrid');
   
   try {
     const res = await fetch(url, { headers: { 'Authorization': apiKey } });
     const data = await res.json();
 
     if (!data.data || data.data.length === 0) {
-      container.innerHTML = `<p>No NBA games today.</p>`;
+      container.innerHTML = `<p>No MLB games today.</p>`;
       return;
     }
 
@@ -146,11 +145,11 @@ export async function updateNBAScores(gameNum) {
   }
 }
 
-updateNBAScores(15);
+updateMLBScores(15);
 
 setInterval(() => {
-  updateNBAScores(15);
-}, 45000);
+  updateMLBScores(15);
+}, 30000);
 
 
 document.addEventListener("click", e => {
