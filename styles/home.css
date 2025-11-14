@@ -1,76 +1,79 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-body{
+/* BODY */
+body {
   font-family: "Poppins", sans-serif;
   display: flex;
-  margin-top: 2rem;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(120deg, rgb(219, 173, 120), rgb(223, 2, 2));
+  justify-content: flex-start;
   min-height: 100vh;
-  padding-bottom: 20vh;
+  background: linear-gradient(120deg, rgb(219, 173, 120), rgb(223, 2, 2));
+  padding: 2rem 1rem 8rem 1rem;
+  gap: 10px;
+  color: #000; /* Keep all base text black */
 }
 
+/* TITLE */
 .title-container {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  align-items: center;
+  width: min(90%, 800px);
 }
 
 .title-container p {
-  color: #ecf0f1;               
-  font-size: 17px;
-  background-color: #e22d2d;       
-  border-radius: 5px;
+  color: #ecf0f1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: #e22d2d;
+  border-radius: 6px;
   cursor: pointer;
-  padding: 10px;
-  box-shadow: 0px 6px 0px #851414; 
+  padding: 8px 16px;
+  box-shadow: 0 4px 0 #851414;
   transition: all 0.2s;
 }
 
-/* Darkmode button */ 
+.title-container p:hover {
+  transform: scale(1.03);
+}
+
+/* DARK MODE TOGGLE */
 .dark-mode-btn {
-  --toggle-size: 12px; /* smaller font size */
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  width: 4.5em;        /* smaller width */
-  height: 2.25em;      /* smaller height */
-  background: linear-gradient(to right, #2a2a2a 50%, #efefef 50%) no-repeat; /* reversed */
+  width: 3.5em;
+  height: 1.75em;
+  background: linear-gradient(to right, #2a2a2a 50%, #efefef 50%) no-repeat;
   background-size: 205%;
-  background-position: 0;  /* start showing dark side (will turn dark mode) */
-  transition: 0.4s;
+  background-position: 0;
   border-radius: 99em;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  align-self: center;
   position: relative;
   cursor: pointer;
-  font-size: var(--toggle-size);
+  transition: 0.4s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode-btn::before {
   content: "";
-  width: 1.5em;          
-  height: 1.5em;         
+  width: 1.3em;
+  height: 1.3em;
   position: absolute;
-  top: 0.375em;          
-  left: 0.375em;         
-  background: linear-gradient(to right, #2a2a2a 50%, #efefef 50%) no-repeat; /* reversed */
-  background-size: 205%;
-  background-position: 100%; /* start knob on dark side */
+  top: 0.22em;
+  left: 0.22em;
   border-radius: 50%;
+  background: linear-gradient(to right, #2a2a2a 50%, #efefef 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
   transition: 0.4s;
 }
 
 .dark-mode-btn:checked::before {
-  left: calc(100% - 1.5em - 0.375em); 
+  left: calc(100% - 1.3em - 0.22em);
   background-position: 0;
 }
 
@@ -78,152 +81,117 @@ body{
   background-position: 100%;
 }
 
-
-
-.title-container p {
-  font-weight: 600;
-  font-size: 2rem;
-}
-
-/*Nav Styles*/
-
-nav{
+/* NAVBAR */
+nav {
   display: flex;
-  width: 50%;
-  height: 5rem;
-  align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  color: #ecf0f1;               
-  background: linear-gradient(135deg, rgb(233, 233, 233), rgb(177, 177, 177));       
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0px 6px 8px rgba(0,0,0,0.2); 
+  align-items: center;
+  width: min(90%, 800px);
+  background: linear-gradient(135deg, rgb(233, 233, 233), rgb(177, 177, 177));
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
 }
 
-a{
-  text-decoration: none;
-  color: inherit;
-  outline: none;              
-  font-size: 17px;
-  padding: 10px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/*a element styles*/
-
-.nfl, .nba, .nhl, .mbl {
-  background-color: rgb(255, 255, 255);       
-  box-shadow: 0px 6px 8px rgba(0,0,0,0.2); 
-}
-
-.nfl li, .nba li, .nhl li, .mbl li {
-  color: black;
-}
-
-
-.nfl:hover, .nba:hover, .nhl:hover, .mbl:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 6px 8px rgba(0,0,0,0.5); 
-}
-
-.nfl:active, .nba:active, .nhl:active, .mbl:active {
-  transform: scale(0.9);
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: inherit;    
-  text-decoration: none; 
-}
-
-/*Sports tab Container styles*/
-
-.sports-container{
-  justify-content: space-between;
-}
-
-.sports-list{
-  list-style: none;
+.sports-list {
   display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
+  gap: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.sport{
-  font-weight: 600;
-  font-size: 1.3rem;
+a {
+  text-decoration: none;
+  color: inherit; /* same as text around it */
+  outline: none;
+  cursor: pointer;
 }
 
-/*Title 2 Styles*/
-.title2{
+.sport {
   font-weight: 600;
+  font-size: 1.2rem;
+  background: white;
+  color: black;
+  padding: 6px 14px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.sport:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sport:active {
+  transform: scale(0.95);
+}
+
+/* TITLE 2 */
+.title2 {
+  text-align: center;
+  color: #000; /* restore black text */
+  margin-top: 1rem;
+}
+
+.title2 h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.title2 h2 {
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  margin-top: 0.5rem;
+}
+
+/* LINE + DATE */
+.line-div {
+  width: min(90%, 800px);
+  margin-top: 2rem;
   text-align: center;
 }
 
-.title2 h1{
-  margin-top: 2rem;
-  font-size: 3rem;
-}
-
-/*Line styles*/
-.live-div{
-  width: 50%;
-}
-
-.games-today-div{
-  display: block;
-  align-items: center;
-  gap: 1rem;
-}
-
-.line{
-  margin-top: 2.5rem;
-  width: 100%;
+.line {
   border: 1px solid black;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.line-text{
+.line-text {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  color: black;
+}
+
+.line-text-2 {
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   font-weight: 600;
-  font-size: 3rem;
+  color: black;
 }
 
-.line-text-2{
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-left: 68px;
-}
-
-/*Games container Styles*/
-
+/* LEAGUE CONTAINERS */
 .nba-container,
 .nfl-container,
 .nhl-container,
 .mbl-container {
   display: flex;
   justify-content: center;
-  padding: 1rem 0px 1rem 0px;
-  margin-top: 2.5rem;
-  width: 45%;
+  width: min(95%, 700px);
   background: linear-gradient(135deg, white, lightgray);
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
 .nba-games,
 .nfl-games,
 .nhl-games,
-.mbl-games{
-  width: 100%;
+.mbl-games {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
   text-align: center;
 }
 
@@ -232,141 +200,201 @@ a:active {
 .nhl-title-container,
 .mbl-title-container {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
+.nba-title-container img,
 .nfl-title-container img,
 .nhl-title-container img,
 .mbl-title-container img {
-  margin-right: 10px;
-  width: 50px;
-}
-
-.nba-title-container img{
-  width: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .nba-title-container p,
 .nfl-title-container p,
 .nhl-title-container p,
 .mbl-title-container p {
-  align-self: center;
   font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
 }
 
 .nba-title-line,
 .nfl-title-line,
 .nhl-title-line,
-.mbl-title-line{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.mbl-title-line {
   width: 60%;
   border: 1px solid gray;
+  margin: 1rem 0;
 }
 
-.nba-footer,
-.nfl-footer,
-.nhl-footer,
-.mbl-footer{
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center;
-  width: 100%;
-  transition: transform 0.2s ease;
-}
-
-.nba-footer p:hover,
-.nfl-footer p:hover,
-.nhl-footer p:hover,
-.mbl-footer p:hover {
-  color: #e22d2d; 
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-
-/*Game grid Display*/
-
-/* Grid container */
+/* GAME GRID */
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto);   /* 2 rows */
-  gap: 8px;
-  width: 80%;
-  margin: 2rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  width: 90%;
+  margin: 1rem auto;
 }
 
+/* GAME CARD */
 .game-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  width: 100%;
-  transition: transform 0.2s;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
   cursor: pointer;
+  padding: 10px;
+  text-align: center;
 }
 
 .game-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .team-row {
-  display: block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 10px
+  gap: 4px;
 }
 
 .team {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 80%;
 }
 
-.team-sub{
-  display: block;
+.team-sub {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  align-content: center;
+  gap: 6px;
 }
 
 .team img {
   width: 28px;
   height: 28px;
-  object-fit: contain;  /* ensures logo fits perfectly */
-  vertical-align: middle; /* keeps it inline with text */
+  object-fit: contain;
 }
 
 .team-name {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  color: black;
 }
 
 .team-score {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: black;
 }
 
 .winner-score {
-  font-weight: 800; /* bold when winning */
+  font-weight: 800;
+  color: black;
 }
 
 .vs-separator {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #666;
+  font-size: 1rem;
+  color: #777;
+  margin: 4px 0;
 }
 
 .game-status {
-  font-size: 0.9rem;
-  color: #c0392b; /* red for active games */
+  font-size: 0.85rem;
   font-weight: 600;
-  text-align: center;
+  color: #2c3e50;
   margin-top: 0.5rem;
 }
 
-/* NFL specific styles */
+/* FOOTERS */
+.nba-footer,
+.nfl-footer,
+.nhl-footer,
+.mbl-footer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.2s;
+}
+
+.nba-footer p:hover,
+.nfl-footer p:hover,
+.nhl-footer p:hover,
+.mbl-footer p:hover {
+  color: #e22d2d;
+  transform: scale(1.05);
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    margin-top: 1rem;
+    padding-bottom: 10vh;
+  }
+
+  .title-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .game-grid {
+    grid-template-columns: 1fr; /* stack cards */
+    width: 95%;
+  }
+
+  .nba-container,
+  .nfl-container,
+  .nhl-container,
+  .mbl-container {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .line-text {
+    font-size: 2rem;
+  }
+
+  .line-text-2 {
+    font-size: 1.2rem;
+  }
+
+  .title2 h1 {
+    font-size: 2.2rem;
+  }
+
+  .title2 h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sport {
+    font-size: 1rem;
+    padding: 4px 10px;
+  }
+
+  .team-name {
+    font-size: 0.9rem;
+  }
+
+  .team-score {
+    font-size: 1rem;
+  }
+
+  .game-card {
+    padding: 8px;
+  }
+}

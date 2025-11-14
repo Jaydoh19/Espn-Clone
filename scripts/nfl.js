@@ -1,7 +1,7 @@
 const apiKey = "0b7aa102-9811-48c5-bb0e-240a86838d37";
 
 // Team logos
-const nflTeamLogos = {
+const teamLogos = {
   ARI: "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png", // Arizona Cardinals
   ATL: "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png", // Atlanta Falcons
   BAL: "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png", // Baltimore Ravens
@@ -35,6 +35,7 @@ const nflTeamLogos = {
   TEN: "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png", // Tennessee Titans
   WAS: "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png"  // Washington Commanders
 };
+
 //Displaying todays date
 dayjs.extend(window.dayjs_plugin_localizedFormat);
 const today = dayjs().format('LL');
@@ -55,7 +56,7 @@ function getTodayDate() {
 // Fetch + refresh data without reloading page
 export async function updateNFLScores(gameNum) {
   const today = getTodayDate();
-  const url = `https://api.balldontlie.io/nfl/v1/games?dates[]=${today}&per_page=100`;
+  const url = `https://api.balldontlie.io/nfl/v1/games?dates[]=${getTodayDate()}&per_page=100`;
   const container = document.querySelector('#nflGrid');
 
   
