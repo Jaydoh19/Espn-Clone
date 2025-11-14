@@ -54,7 +54,7 @@ function getTodayDate() {
 // Fetch + refresh data without reloading page
 export async function updateMLBScores(gameNum) {
   const today = getTodayDate();
-  const url = `https://api.balldontlie.io/mlb/v1/games?dates[]=2025-11-01&per_page=100`;
+  const url = `https://api.balldontlie.io/mlb/v1/games?dates[]=${today}&per_page=100`;
   const container = document.querySelector('#mlbGrid');
   
   try {

@@ -1,39 +1,40 @@
 const apiKey = "0b7aa102-9811-48c5-bb0e-240a86838d37";
 
 // Team logos
-const teamLogos = {
-  ATL: "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
-  BOS: "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
-  BKN: "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
-  CHA: "https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
-  CHI: "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
-  CLE: "https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
-  DAL: "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
-  DEN: "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
-  DET: "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
-  GSW: "https://a.espncdn.com/i/teamlogos/nba/500/gs.png",
-  HOU: "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
-  IND: "https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
-  LAC: "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
-  LAL: "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
-  MEM: "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
-  MIA: "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
-  MIL: "https://a.espncdn.com/i/teamlogos/nba/500/mil.png",
-  MIN: "https://a.espncdn.com/i/teamlogos/nba/500/min.png",
-  NOP: "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
-  NYK: "https://a.espncdn.com/i/teamlogos/nba/500/ny.png",
-  OKC: "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
-  ORL: "https://a.espncdn.com/i/teamlogos/nba/500/orl.png",
-  PHI: "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
-  PHX: "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
-  POR: "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
-  SAC: "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
-  SAS: "https://a.espncdn.com/i/teamlogos/nba/500/sa.png",
-  TOR: "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
-  UTA: "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
-  WAS: "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png"
+const nflTeamLogos = {
+  ARI: "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png", // Arizona Cardinals
+  ATL: "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png", // Atlanta Falcons
+  BAL: "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png", // Baltimore Ravens
+  BUF: "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png", // Buffalo Bills
+  CAR: "https://a.espncdn.com/i/teamlogos/nfl/500/car.png", // Carolina Panthers
+  CHI: "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png", // Chicago Bears
+  CIN: "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png", // Cincinnati Bengals
+  CLE: "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png", // Cleveland Browns
+  DAL: "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png", // Dallas Cowboys
+  DEN: "https://a.espncdn.com/i/teamlogos/nfl/500/den.png", // Denver Broncos
+  DET: "https://a.espncdn.com/i/teamlogos/nfl/500/det.png", // Detroit Lions
+  GB:  "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",  // Green Bay Packers
+  HOU: "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png", // Houston Texans
+  IND: "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png", // Indianapolis Colts
+  JAX: "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png", // Jacksonville Jaguars
+  KC:  "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",  // Kansas City Chiefs
+  LAC: "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png", // Los Angeles Chargers
+  LAR: "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png", // Los Angeles Rams
+  LV:  "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",  // Las Vegas Raiders
+  MIA: "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png", // Miami Dolphins
+  MIN: "https://a.espncdn.com/i/teamlogos/nfl/500/min.png", // Minnesota Vikings
+  NE:  "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",  // New England Patriots
+  NO:  "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",  // New Orleans Saints
+  NYG: "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png", // New York Giants
+  NYJ: "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png", // New York Jets
+  PHI: "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png", // Philadelphia Eagles
+  PIT: "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png", // Pittsburgh Steelers
+  SEA: "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png", // Seattle Seahawks
+  SF:  "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",  // San Francisco 49ers
+  TB:  "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",  // Tampa Bay Buccaneers
+  TEN: "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png", // Tennessee Titans
+  WAS: "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png"  // Washington Commanders
 };
-
 //Displaying todays date
 dayjs.extend(window.dayjs_plugin_localizedFormat);
 const today = dayjs().format('LL');
