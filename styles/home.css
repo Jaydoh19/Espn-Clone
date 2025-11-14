@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background: linear-gradient(120deg, rgb(219, 173, 120), rgb(223, 2, 2));
+  background: rgb(253, 155, 74);
   padding: 2rem 1rem 8rem 1rem;
   gap: 10px;
   color: #000; /* Keep all base text black */
@@ -131,7 +131,7 @@ a {
 /* TITLE 2 */
 .title2 {
   text-align: center;
-  color: #000; /* restore black text */
+  color: white;
   margin-top: 1rem;
 }
 
@@ -152,7 +152,7 @@ a {
 }
 
 .line {
-  border: 1px solid black;
+  border: 1px solid brown;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -160,13 +160,13 @@ a {
 .line-text {
   font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 700;
-  color: black;
+  color: white;
 }
 
 .line-text-2 {
   font-size: clamp(1rem, 3.5vw, 1.5rem);
   font-weight: 600;
-  color: black;
+  color: white;
 }
 
 /* LEAGUE CONTAINERS */
